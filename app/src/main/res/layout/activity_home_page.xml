@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".HomePageActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/topInfoRL"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="16dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="@color/mainTheme"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="2dp"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+
+                <LinearLayout
+                    android:id="@+id/userInfoLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/nameSurnameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_person_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:text="name surname"
+                        android:gravity="bottom"
+                        android:padding="5dp"/>
+
+                    <TextView
+                        android:id="@+id/mailTV"
+                        android:layout_below="@+id/nameSurnameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mail address"
+                        android:drawableStart="@drawable/ic_email_black_half_opacity_24dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="bottom"
+                        android:padding="5dp"/>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/settingsIV"
+                    android:layout_toStartOf="@+id/logoutIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/radius"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_settings_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/logoutIV"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/radius"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_power_settings_new_black_24dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/homeMainTV"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Plant Waterer"
+        android:textSize="20dp"/>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/radius_bottom_nav"
+        app:menu="@menu/navigation"
+        app:labelVisibilityMode="unlabeled"/>
+
+
+</RelativeLayout>

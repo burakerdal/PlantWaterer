@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_device_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DeviceListActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/myDevicesRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/radius_home_top">
+
+        <TextView
+            android:id="@+id/plantListTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Devices"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:ems="8"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_paired"
+        android:layout_below="@+id/myDevicesRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:cacheColorHint="#00000000" />
+
+    <RelativeLayout
+        android:id="@+id/newDevicesRelativeLayout"
+        android:layout_below="@+id/lv_paired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/radius_home_top">
+
+        <TextView
+            android:id="@+id/newDeviceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Devices"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:ems="8"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_newDevice"
+        android:layout_below="@+id/newDevicesRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:cacheColorHint="#00000000" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/refreshfloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        app:backgroundTint="@color/mainTheme"
+        app:srcCompat="@drawable/ic_refresh_black_24dp" />
+
+
+</RelativeLayout>

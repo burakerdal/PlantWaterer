@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_devices"
+        android:icon="@drawable/ic_devices_black_24dp"
+        android:title="My Devices" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_plants"
+        android:icon="@drawable/ic_local_florist_black_24dp"
+        android:title="My Plants" />
+
+
+
+</menu>

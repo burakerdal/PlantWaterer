@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingsMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/usermenutitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/settingsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:ems="8"
+            android:text="Settings"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usermenutitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/eply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius2">
+
+            <TextView
+                android:id="@+id/textViewEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_edit_black_24dp"
+                android:drawablePadding="5dp"
+                android:text="Edit Profile"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dmly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eply"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius2">
+
+            <TextView
+                android:id="@+id/textViewDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_invert_colors_black_24dp"
+                android:drawablePadding="5dp"
+                android:text="Dark Mode"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_centerVertical="true"
+                android:id="@+id/switchDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textOff="off"
+                android:textOn="on"
+                android:thumb="@drawable/sw_thumb"
+                app:showText="true"
+                app:track="@drawable/sw_track" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dmly"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius2">
+
+            <TextView
+                android:id="@+id/textViewBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_bluetooth_24dp"
+                android:drawablePadding="5dp"
+                android:text="Bluetooth"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBT"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textOff="off"
+                android:textOn="on"
+                android:thumb="@drawable/sw_thumb"
+                app:showText="true"
+                app:track="@drawable/sw_track" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flash1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btly"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius2">
+
+            <TextView
+                android:id="@+id/textViewFlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_lightbulb_outline_yellow_24dp"
+
+                android:drawablePadding="5dp"
+                android:text="Light"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/lightSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/textViewFlash"
+                android:background="@drawable/radius"
+                android:padding="10dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchFlash"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textOff="off"
+                android:textOn="on"
+                android:thumb="@drawable/sw_thumb"
+                app:showText="true"
+                app:track="@drawable/sw_track" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/aboutly"
+            android:layout_below="@+id/flash1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius2">
+
+            <TextView
+                android:id="@+id/textViewAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_info_black_24dp"
+                android:drawablePadding="5dp"
+                android:text="About PlantWaterer"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
